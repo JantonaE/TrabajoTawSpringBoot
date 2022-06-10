@@ -128,6 +128,7 @@ public class Usuario {
         dto.setNombre(nombre);
         dto.setSexo(sexo);
         //dto.setVendedor(vendedor.toDTO());
+        dto.setContraseña(contraseña);
         return dto;
     }
 

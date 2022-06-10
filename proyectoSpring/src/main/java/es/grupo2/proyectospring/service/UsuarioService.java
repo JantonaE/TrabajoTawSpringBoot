@@ -44,6 +44,12 @@ public class UsuarioService {
 
         return this.usuarioEntityADTO(lista);
     }
+
+    public List<UsuarioDTO> findByNombre(String nombre) {
+        List<UsuarioDTO> listaDTO = usuarioEntityADTO(this.usuarioRepository.findByNombre(nombre));
+        return listaDTO;
+    }
+
     public List<UsuarioDTO> findBySexo(String sexo) {
         List<UsuarioDTO> listaDTO = usuarioEntityADTO(this.usuarioRepository.findBySexo(sexo));
         return listaDTO;

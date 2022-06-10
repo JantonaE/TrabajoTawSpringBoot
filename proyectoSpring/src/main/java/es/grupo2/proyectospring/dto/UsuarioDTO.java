@@ -34,6 +34,8 @@ public class UsuarioDTO {
 
     private MarketingDTO marketing;
 
+    private String contraseña;
+
     //private AdministradorDTO administrador;
 
     //private VendedorDTO vendedor;
@@ -116,6 +118,10 @@ public class UsuarioDTO {
     public void setMarketing(MarketingDTO marketing) {
         this.marketing = marketing;
     }
+
+    public void setContraseña(String contraseña){this.contraseña=contraseña;}
+
+    public String getContraseña(){return contraseña;}
 
     @Override
     public int hashCode() {

@@ -10,6 +10,7 @@ import java.util.List;
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
 
+    public List<Usuario> findByNombre(String nombre);
 
     public List<Usuario> findBySexo(String str);
 

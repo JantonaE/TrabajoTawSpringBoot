@@ -1,5 +1,7 @@
 package es.grupo2.proyectospring.entity;
 
+import es.grupo2.proyectospring.dto.AnalistaDTO;
+
 import javax.persistence.*;
 import java.util.Objects;
 
@@ -29,5 +31,11 @@ public class Analista {
     @Override
     public int hashCode() {
         return Objects.hash(usuarioId);
+    }
+
+    public AnalistaDTO toDTO(){
+        AnalistaDTO an = new AnalistaDTO();
+        an.setUsuarioId(Long.valueOf(usuarioId));
+        return an;
     }
 }

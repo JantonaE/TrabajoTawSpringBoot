@@ -1,5 +1,7 @@
 package es.grupo2.proyectospring.entity;
 
+import es.grupo2.proyectospring.dto.ProductoDTO;
+
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Objects;
@@ -85,5 +87,16 @@ public class Producto {
     @Override
     public int hashCode() {
         return Objects.hash(id, titulo, descripcion, precioSalida, urlFoto, categoriaProducto);
+    }
+
+    public ProductoDTO toDTO() {
+        ProductoDTO dto = new ProductoDTO();
+        dto.setCategoriaProducto(categoriaProducto);
+        dto.setDescripcion(descripcion);
+        dto.setId(id);
+        dto.setPrecioSalida(precioSalida);
+        dto.setTitulo(titulo);
+        dto.setURLfoto(urlFoto);
+        return dto;
     }
 }
